@@ -7,7 +7,6 @@ from requests import (
     get,
 )
 
-
 from bs4 import (
     BeautifulSoup,
 )
@@ -63,7 +62,7 @@ class ImageDownloader:
                 continue
 
             # Télécharge le fichier et l'enregistre dans le dossier de destination.
-            response = requests.get(download_url)
+            response = get(download_url)
             with open(dest_path, "wb") as f:
                 f.write(response.content)
                 print(f"Le fichier {filename} a été téléchargé avec succès.")
