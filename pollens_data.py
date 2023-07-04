@@ -71,3 +71,4 @@ class PollensDataManager:
             df_pollens.to_csv(filepath, index=False)
             print(f"Le DataFrame a été enregistré sous le nom de fichier : {filepath}")
             print(df_pollens)
+##################################################################################################################

@@ -11,7 +11,7 @@ from bs4 import (
     BeautifulSoup,
 )
 
-
+##################################################################################################################
 # Cette classe permet de télécharger des images depuis une URL spécifiée et de les stocker dans des dossiers.
 class ImageDownloader:
     # Initialisation de la classe avec l'URL de l'image et le dossier de l'image.
@@ -66,3 +66,4 @@ class ImageDownloader:
             with open(dest_path, "wb") as f:
                 f.write(response.content)
                 print(f"Le fichier {filename} a été téléchargé avec succès.")
+##################################################################################################################
