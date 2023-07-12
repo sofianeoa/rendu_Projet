@@ -35,9 +35,11 @@ class ImageDownloader:
         file_links = [link.get("href") for link in soup.find_all("a") if link.get("href").endswith(".jpg")]
 
         for file_link in file_links:
+            # Ignore les fichiers contenant le mot 'prevision'.
+            if 'prevision' in file_link.lower():
+                continue
             download_url = "http://www.prevair.org/donneesmisadispo/public/" + file_link
-            filename = path.basename(download_url)
-
+            filename = path.basename(download_url)  
             # Détermine le dossier de destination en fonction du nom du fichier.
             if "MAXJ" in filename:
                 dest_folder = self.maxj_folder
